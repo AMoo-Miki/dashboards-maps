@@ -16,6 +16,7 @@ import { handleDataLayerRender } from '../../model/layerRenderController';
 import { MapLayerSpecification } from '../../model/mapLayerType';
 import { MapState } from '../../model/mapState';
 import { HeaderVariant } from '../../../../../src/core/public';
+import { TopNavMenuItemRenderType } from '../../../../../src/plugins/navigation/public';
 
 interface MapTopNavMenuProps {
   mapIdFromUrl: string;
@@ -153,7 +154,7 @@ export const MapTopNavMenu = ({
       config={config}
       setMenuMountPoint={setHeaderActionMenu}
       indexPatterns={layersIndexPatterns || []}
-      showSearchBar={true}
+      showSearchBar={TopNavMenuItemRenderType.IN_PORTAL}
       showFilterBar={false}
       showDatePicker={true}
       showQueryBar={true}
